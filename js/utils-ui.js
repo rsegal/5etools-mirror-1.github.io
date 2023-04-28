@@ -3240,6 +3240,18 @@ class DragReorderUiUtil {
 	}
 }
 
+class SpellbookUtil {
+	/**
+	 * @param options Options object.
+	 * @param options.$parent Parent element.
+	 */
+	static render (options) {
+		const $helloWorldElem = $$`<div class="h-100 w-100 ve-flex-vh-center"><div class="ve-flex-col">
+		<h3 class="text-center">"Hello World"</h3>
+		</div></div>`.appendTo(options.$parent);
+	}
+}
+
 class SourceUiUtil {
 	static _getValidOptions (options) {
 		if (!options) throw new Error(`No options were specified!`);
@@ -5671,6 +5683,7 @@ globalThis.SearchUiUtil = SearchUiUtil;
 globalThis.SearchWidget = SearchWidget;
 globalThis.InputUiUtil = InputUiUtil;
 globalThis.DragReorderUiUtil = DragReorderUiUtil;
+globalThis.SpellbookUtil = SpellbookUtil;
 globalThis.SourceUiUtil = SourceUiUtil;
 globalThis.BaseComponent = BaseComponent;
 globalThis.ComponentUiUtil = ComponentUiUtil;
